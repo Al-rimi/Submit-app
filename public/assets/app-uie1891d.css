@@ -8,8 +8,6 @@
 
 html,
 body {
-    height: 100%;
-    min-height: 100%;
     background-color: #392b45;
     overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
@@ -178,7 +176,7 @@ body {
     font-family: 'Arial', sans-serif;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100dvh;
     color: #ffffff;
 }
 
@@ -647,6 +645,7 @@ h3 {
 
     .divTable{
         max-width: 100%;
+        min-width: 200px;
         width: 100%;
     }
 
@@ -668,7 +667,7 @@ h3 {
     }
 
     thead th:nth-child(3) {
-        width: 30%;
+        width: 32%;
     }
 }
 
@@ -693,19 +692,34 @@ h3 {
         height: 400px;
         width: 300px;
     }
+    thead th:nth-child(3) {
+        width: 34%;
+    }
 }
 
 @media screen and (max-width: 380px) {
 
     .divForm {
-        margin-top: -10px;
-        margin-bottom: 2px;
-    }
-    .mainContainer{
-        transform: scale(0.8);
+        margin-top: 0px;
+        margin-bottom: 20px;
     }
     .divTable{
-        transform: scale(0.9);
+        height: 200px;
+    }
+    .fixedArea {
+        height: 21%;
+    }
+    .scrollingArea {
+        height: 79%;
+    }
+    thead th:nth-child(3) {
+        width: 34%;
+    }
+    thead th{
+        font-size: 14px;
+    }
+    table {
+        font-size: 12px;
     }
 
 }

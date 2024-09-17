@@ -77,8 +77,6 @@ function checkFormAndShake(event) {
         event.preventDefault();
         fileInput.focus();
         shakeButton(submitButton);
-    } else {
-        console.log('Form is valid!');
     }
 }
 
@@ -111,7 +109,6 @@ window.onclick = function (event) {
 // Event listeners
 document.getElementById("student-id").addEventListener("input", validateAndAutoFill);
 document.getElementById("submit-button").addEventListener("click", (event) => {
-    console.log('Button clicked!');
     checkFormAndShake(event);
 });
 document.getElementById('file-upload').addEventListener('change', function () {
@@ -121,3 +118,81 @@ document.getElementById('file-upload').addEventListener('change', function () {
 // Update the countdown every 1 second
 const countdownInterval = setInterval(updateCountdown, 1000);
 updateCountdown(); // Initialize countdown display
+
+// Function to count the number of students who submitted (i.e., "Yes" in the third column)
+function updateSubmissionCounter() {
+    const tableRows = document.querySelectorAll('#studentTable tbody tr');
+    let count = 0;
+
+    // Loop through each row and check the "Submitted" column (index 2)
+    tableRows.forEach(row => {
+        const submittedCell = row.cells[2];
+        if (submittedCell && submittedCell.textContent.trim() === "Yes") {
+            count++;
+        }
+    });
+
+    document.getElementById('submissionCounter').textContent = `${count} Submitted`;
+}
+
+window.onload = updateSubmissionCounter;
+
+
+document.getElementById('submission-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    document.getElementById('submit-button').style.display = 'none';
+    document.getElementById('file-upload').style.display = 'none';
+    document.getElementById('progress-container').style.display = 'block';
+    document.getElementById('submit-button').disabled = true;
+
+    var fakePercent = 0;
+    var interval = setInterval(function() {
+        if (fakePercent < 99) {
+            fakePercent++;
+            document.getElementById('progress-bar').style.width = fakePercent + '%';
+        } else {
+            clearInterval(interval);
+        }
+    }, 100);
+
+    var formData = new FormData(this);
+    var formActionUrl = this.action;
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', formActionUrl, true);
+
+    xhr.addEventListener('load', function() {
+        if (xhr.status >= 200 && xhr.status < 300) {
+            clearInterval(interval);
+            document.getElementById('progress-bar').style.width = '100%';
+            document.getElementById('progress-bar').textContent = 'Thank You!!';
+            document.getElementById('progress-bar').style.backgroundColor = 'rgba(72, 255, 0, 0.5)';
+
+            var studentId = document.getElementById('student-id').value;
+            var table = document.getElementById('studentTable');
+            var rows = table.getElementsByTagName('tr');
+
+            for (var i = 0; i < rows.length; i++) {
+                var cells = rows[i].getElementsByTagName('td');
+                if (cells[0] && cells[0].innerText === studentId) {
+                    cells[2].innerText = 'Yes';
+                    cells[2].style.color = '#a0ff61b7'; // green
+                    break;
+                }
+            }
+            updateSubmissionCounter();
+        } else {
+            clearInterval(interval);
+            document.getElementById('progress-bar').style.width = '100%';
+            document.getElementById('progress-bar').textContent = 'failed: Content too large';
+            document.getElementById('progress-bar').style.backgroundColor = 'red';
+            document.getElementById('submit-button').style.display = 'block';
+            document.getElementById('submit-button').disabled = false;
+            document.getElementById('file-upload').style.display = 'block';
+            document.getElementById('file-upload').value = null;
+        }
+    });
+
+    xhr.send(formData);
+});
+

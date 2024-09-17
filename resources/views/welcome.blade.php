@@ -14,7 +14,7 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
 
     <title>Submit</title>
-    <link rel="stylesheet" href="{{ asset('assets\app-uie189.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets\app-uie1891d.css') }}">
     <script>
         const deadlineDate = new Date("2024-09-18T23:59:59").getTime(); // deadline date
     </script>
@@ -58,7 +58,7 @@
                         <tr>
                             <th>Student ID</th>
                             <th>Name</th>
-                            <th>Submitted</th>
+                            <th id="submissionCounter">Submitted</th>
                         </tr>
                     </thead>
                 </table>
@@ -106,7 +106,6 @@
                     </svg>
                 </a>
             </div>
-            <script></script>
         </div>
     </footer>
 
@@ -125,65 +124,8 @@
             <li></li>
         </ul>
     </div>
-    <script>
-        document.getElementById('submission-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            document.getElementById('submit-button').style.display = 'none';
-            document.getElementById('file-upload').style.display = 'none';
-            document.getElementById('progress-container').style.display = 'block';
-            document.getElementById('submit-button').disabled = true;
 
-            var fakePercent = 0;
-            var interval = setInterval(function() {
-                if (fakePercent < 99) {
-                    fakePercent++;
-                    document.getElementById('progress-bar').style.width = fakePercent + '%';
-                } else {
-                    clearInterval(interval);
-                }
-            }, 100);
-
-            var formData = new FormData(this);
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', '{{ route('students.submit') }}', true);
-
-            xhr.addEventListener('load', function() {
-                if (xhr.status >= 200 && xhr.status < 300) {
-                    clearInterval(interval);
-                    document.getElementById('progress-bar').style.width = '100%';
-                    document.getElementById('progress-bar').textContent = 'Thank You!!';
-                    document.getElementById('progress-bar').style.backgroundColor = 'rgba(72, 255, 0, 0.5)';
-
-                    var studentId = document.getElementById('student-id').value;
-                    var table = document.getElementById('studentTable');
-                    var rows = table.getElementsByTagName('tr');
-
-                    for (var i = 0; i < rows.length; i++) {
-                        var cells = rows[i].getElementsByTagName('td');
-                        if (cells[0] && cells[0].innerText === studentId) {
-                            cells[2].innerText = 'Yes';
-                            cells[2].style.color = '#a0ff61b7'; // green
-                            break;
-                        }
-                    }
-                } else {
-                    clearInterval(interval);
-                    document.getElementById('progress-bar').style.width = '100%';
-                    document.getElementById('progress-bar').textContent = 'failed: Content too large';
-                    document.getElementById('progress-bar').style.backgroundColor = 'red';
-                    document.getElementById('submit-button').style.display = 'block';
-                    document.getElementById('submit-button').disabled = false;
-                    document.getElementById('file-upload').style.display = 'block';
-                    document.getElementById('file-upload').value = null;
-                }
-            });
-
-            xhr.send(formData);
-        });
-    </script>
-
-    <script src="{{ asset('assets\app-n21vwo.js') }}"></script>
-
+    <script src="{{ asset('assets\app-n21vw71a.js') }}"></script>
 </body>
 
 </html>
