@@ -1,4 +1,4 @@
-<p align="center"><a href="https://github.com/Al-rimi/Submit-page" target="_blank"><img src="public/favicon.ico" width="400" alt="Project Logo"></a></p>
+<p align="center"><a href="https://github.com/Al-rimi/Submit-page" target="_blank"><img src="public/favicon.ico" width="40" alt="Project Logo"></a></p>
 
 <p align="center">
 <a href="https://github.com/Al-rimi/Submit-page/actions"><img src="https://github.com/Al-rimi/Submit-page/workflows/tests/badge.svg" alt="Build Status"></a>
