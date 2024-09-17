@@ -53,10 +53,6 @@ If you discover a security vulnerability, please email Abdullah Al Raimi at [abd
 
 - **Weixin JSSDK Integration**: WeChat has blocked my application due to security concerns. If you have solutions that do not require an official Weixin account, please contact me.
 
-## Contributing
-
-Contributions are welcome! To report an issue or submit a pull request, please refer to our [contribution guide](https://github.com/Al-rimi/Submit-page/CONTRIBUTING.md).
-
 ## License
 
 This project is licensed under the [MIT license](LICENSE).
