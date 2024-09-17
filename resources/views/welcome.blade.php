@@ -86,7 +86,7 @@
     <footer>
         <div class="footer-container">
             <div class="left">
-                <a href="https://github.com/Al-rimi" target="_blank" class="icon-text">
+                <a href="https://github.com/Al-rimi/Submit-page/" target="_blank" class="icon-text">
                     <svg aria-hidden="true" class="octicon octicon-mark-github" height="24" version="1.1"
                         viewBox="0 0 16 16" width="24">
                         <path fill-rule="evenodd"
