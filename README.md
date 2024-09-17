@@ -1,52 +1,50 @@
-<p align="center"><a href="https://yourwebsite.com" target="_blank"><img src="https://yourwebsite.com/path-to-your-logo/logo.svg" width="400" alt="Your Project Logo"></a></p>
+<p align="center"><a href="https://github.com/Al-rimi/Submit-page" target="_blank"><img src="https://raw.githubusercontent.com/Al-rimi/Submit-page/main/public/favicon.ico" width="400" alt="Project Logo"></a></p>
 
 <p align="center">
-<a href="https://github.com/your-username/your-project/actions"><img src="https://github.com/your-username/your-project/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/your-username/your-project"><img src="https://img.shields.io/packagist/dt/your-username/your-project" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/your-username/your-project"><img src="https://img.shields.io/packagist/v/your-username/your-project" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/your-username/your-project"><img src="https://img.shields.io/packagist/l/your-username/your-project" alt="License"></a>
+<a href="https://github.com/Al-rimi/Submit-page/actions"><img src="https://github.com/Al-rimi/Submit-page/workflows/tests/badge.svg" alt="Build Status"></a>
+<a href="https://github.com/Al-rimi/Submit-page/releases"><img src="https://img.shields.io/github/v/release/Al-rimi/Submit-page" alt="Latest Stable Version"></a>
+<a href="https://github.com/Al-rimi/Submit-page/issues"><img src="https://img.shields.io/github/issues/Al-rimi/Submit-page" alt="Open Issues"></a>
+<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
 </p>
 
 ## About This Project
 
-This project is designed to simplify the application process for international students applying to Chinese universities. It provides a streamlined, user-friendly experience that guarantees admission upon submission, handling complex tasks such as:
+The **Submit Page** is a dynamic web application designed to manage student submissions efficiently. It enables users to submit files while validating file formats and sizes, and provides real-time progress updates. This project focuses on:
 
-- [Fast and secure user authentication](https://yourwebsite.com/docs/authentication).
-- [Dynamic language support](https://yourwebsite.com/docs/language-support) with seamless switching between languages.
-- Responsive and mobile-friendly [submission forms](https://yourwebsite.com/docs/forms) with real-time validation and file upload support.
-- Scalable back-end processing for [file uploads](https://yourwebsite.com/docs/file-uploads), including validation for various file types and sizes.
-- Customizable, dynamic [student submission tracking](https://yourwebsite.com/docs/submission-tracking) with real-time updates.
+- **Seamless Form Validation**: Ensures that all form inputs are correctly filled out with feedback and error messages.
+- **File Uploading**: Handles file uploads with smooth progress indicators, and supports various file types.
+- **Responsive Design**: Built for usability across multiple devices, including mobile screens.
+- **Weixin JSSDK Integration**: Allows WeChat browser compatibility, enabling file selection and uploads via WeChat.
 
-This project is accessible, powerful, and provides all the tools needed to manage large-scale international student applications.
+## Key Features
 
-## Learning and Documentation
+- **Auto-fill Functionality**: Automatically populates form fields with student data to streamline the submission process.
+- **Background Animations**: Enhances user experience with floating cubes and modern design elements.
+- **File Validation**: Supports multiple file formats and checks for size limits to ensure proper submission.
+- **Laravel Framework**: Built using Laravel, offering powerful back-end capabilities and security.
+- **Dynamic Table Management**: Displays and updates student submissions dynamically without page reloads.
 
-This project offers extensive [documentation](https://yourwebsite.com/docs) covering all its features and a variety of tutorials to help you get started quickly.
+## Learning Resources
 
-If you prefer video tutorials, check out our [Video Library](https://yourwebsite.com/videos), where you’ll find guides covering everything from basic usage to advanced configurations.
+To get started with Laravel, check out its comprehensive [documentation](https://laravel.com/docs). You may also want to explore the following resources for additional learning:
 
-## Sponsors and Partners
-
-We would like to thank our sponsors for supporting this project. If you are interested in becoming a sponsor, please visit our [Sponsorship Page](https://yourwebsite.com/sponsors).
-
-### Premium Partners
-
-- **[Your First Partner](https://yourfirstpartner.com)**
-- **[Your Second Partner](https://yoursecondpartner.com)**
-- **[Your Third Partner](https://yourthirdpartner.com)**
+- [Laravel Bootcamp](https://bootcamp.laravel.com)
+- [Laracasts](https://laracasts.com)
 
 ## Contributing
 
-Thank you for considering contributing to this project! You can find our contribution guide in the [documentation](https://yourwebsite.com/docs/contributing).
-
-## Code of Conduct
-
-We are committed to creating a welcoming community for everyone. Please review and abide by our [Code of Conduct](https://yourwebsite.com/docs/code-of-conduct) to help us foster an inclusive environment.
+Contributions to this project are welcome! If you'd like to report an issue or submit a pull request, please visit our [contribution guide](https://github.com/Al-rimi/Submit-page/CONTRIBUTING.md).
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability, please contact us at [security@yourwebsite.com](mailto:security@yourwebsite.com). We will address all security issues promptly.
+If you discover a security vulnerability, please send an e-mail to Abdullah Al Raimi via [email@example.com](mailto:email@example.com). All security vulnerabilities will be promptly addressed.
 
 ## License
 
-This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Screenshot
+
+Here is a preview of the web page:
+
+![Web Page Screenshot](md/Screenshot_1080-1920.png)
