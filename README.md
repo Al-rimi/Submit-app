@@ -37,6 +37,8 @@
 Here’s a preview of the web page:
 
 ![Web Page Screenshot](md/Screenshot_1080-1920.png)
+![Web Page Screenshot](md/Screenshot_1080-1920-2.png)
+
 
 ## Learning Resources
 
