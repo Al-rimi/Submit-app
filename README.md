@@ -1,12 +1,13 @@
 <p align="center">
-  <a href="https://github.com/Al-rimi/Submit-page" target="_blank">
+  <a href="https://syalux.com" target="_blank">
     <img src="public/favicon.ico" width="80" alt="Project Logo">
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/Al-rimi/Submit-page/actions">
-    <img src="https://github.com/Al-rimi/Submit-page/workflows/tests/badge.svg" alt="Build Status">
+    <img src="https://img.shields.io/badge/build-status-not_available-lightgrey" alt="Build Status">
+    </a>
   </a>
   <a href="https://github.com/Al-rimi/Submit-page/releases">
     <img src="https://img.shields.io/github/v/release/Al-rimi/Submit-page" alt="Latest Stable Version">
