@@ -16,7 +16,7 @@
     <title>Submit</title>
     <link rel="stylesheet" href="{{ asset('assets\app-uie1891d.css') }}">
     <script>
-        const deadlineDate = new Date("2024-09-18T23:59:59").getTime(); // deadline date
+        const deadlineDate = new Date("2024-09-25T23:59:59").getTime(); // deadline date
     </script>
 </head>
 
@@ -74,7 +74,6 @@
                                 <td style="color: {{ $student->submit_count > 0 ? '#a0ff61b7;' : '#ff5d5dd3;' }}">
                                     {{ $student->submit_count > 0 ? 'Yes' : 'No' }}
                                 </td>
-
                             </tr>
                         @endforeach
                     </tbody>
@@ -125,7 +124,7 @@
         </ul>
     </div>
 
-    <script src="{{ asset('assets\app-n21vw71a.js') }}"></script>
+    <script src="{{ asset('assets\app-n21vw71c.js') }}"></script>
 </body>
 
 </html>
