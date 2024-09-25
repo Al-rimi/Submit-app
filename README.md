@@ -18,11 +18,7 @@
 
 ## About This Project
 
-**Submit Page** is a dynamic web application designed to efficiently manage student submissions. Key features include:
-
-- **Seamless Form Validation**: Ensures that all form inputs are correctly filled out, with feedback and error messages.
-- **File Uploading**: Handles file uploads with smooth progress indicators and supports various file types.
-- **Responsive Design**: Built for usability across multiple devices, including mobile screens.
+**Submit Page** is a dynamic web application designed to efficiently manage student submissions.
 
 ## Key Features
 
